@@ -1,0 +1,30 @@
+.color-picker-container{
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 507px;
+
+  .selected-color{
+    font-size: 1.3rem;
+    white-space: pre;
+    font-family: monospace;
+  }
+
+  .colors{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .color-column{
+    margin: 0 1px 0 1px;
+  }
+
+  .color-item{
+    width: 37px;
+    height: 37px;
+    margin-top: 2px;
+  }
+}

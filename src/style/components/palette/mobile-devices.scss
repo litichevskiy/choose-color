@@ -1,0 +1,19 @@
+@media( max-width: 830px ) {
+  .color-picker-container{
+    width: 450px;
+  }
+}
+
+@media( max-width: 760px ) {
+  .color-picker-container{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .selected-color{
+      text-align: center;
+      margin: 1rem 0;
+    }
+  }
+}

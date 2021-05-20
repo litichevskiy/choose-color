@@ -1,0 +1,8 @@
+@import './reset';
+@import './app';
+/* desktop */
+@import './components/palette/index.scss';
+@import './components/slider/index.scss';
+/* mobile-devices */
+@import './components/palette/mobile-devices.scss';
+@import './components/slider/mobile-devices.scss';

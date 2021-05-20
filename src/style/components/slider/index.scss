@@ -1,0 +1,14 @@
+.slider{
+  width: 276px;
+  background-color: #FFF;
+
+  .splide__slide{
+    height: 500px;
+  }
+
+  .splide__slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
