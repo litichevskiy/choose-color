@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 app.use('/dist', express.static(__dirname + '/dist'));
-app.use('/images', express.static(__dirname + '/src/images'));
+app.use('/src', express.static(__dirname + '/src'));
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname+'/index.html'));
 });
