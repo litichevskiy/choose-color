@@ -1,5 +1,7 @@
 import colors from '../colors.json';
 
+const QUANTITY_COLORS_IN_COL = 6;
+
 class Palette {
 
   constructor({ container, pubsub }) {
@@ -12,17 +14,21 @@ class Palette {
   }
 
   init() {
-    const fragment = document.createDocumentFragment();
 
-    for( let i = 0; i < colors.length; i++ ) {
+    const fragment = document.createDocumentFragment();
+    const length = colors.length;
+    let counter = 0;
+
+    while ( counter < length ) {
 
       const li = document.createElement('li');
       li.classList.add('color-column');
 
-      for( let j = 0; j < 6; j++ ) {
+      for( let i = 0; i < QUANTITY_COLORS_IN_COL; i++ ) {
 
-        const { name, hex } = colors[ i++ ];
+        const { name, hex } = colors[counter];
         const div = document.createElement('div');
+
         div.classList.add('color-item');
         div.setAttribute('data-name', name );
         div.setAttribute('data-hex', hex );
@@ -30,6 +36,9 @@ class Palette {
         div.style.background = hex;
 
         li.appendChild( div );
+        counter++;
+
+        if ( counter >= length ) break;
       }
 
       fragment.appendChild( li );
